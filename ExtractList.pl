@@ -8,7 +8,7 @@ opendir (DIR1, $VcfDIR)|| die "can't opendir $VcfDIR: $!";my (@Files_in_Dir) = r
 foreach my $Files(@Files_in_Dir)
   {
   chomp $Files;
-  if ($Files =~ /^.*polyploid\.1\.m\.A\.vcf$/)
+  if ($Files =~ /^.*\.vcf$/)
     {
     open(SCVfile, $Files) || die ("Couldn't open the $Files");
     while (<SCVfile>)
